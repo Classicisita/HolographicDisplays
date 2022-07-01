@@ -142,16 +142,6 @@ public class HologramCommandManager extends SubCommandManager {
     }
 
     @Override
-    protected void sendNoArgsMessage(CommandContext context) {
-        CommandSender sender = context.getSender();
-        sender.sendMessage(ColorScheme.PRIMARY_DARK + "Server is running " + ColorScheme.PRIMARY + "Holographic Displays "
-                + ColorScheme.PRIMARY_DARK + "v" + pluginVersion + " by " + ColorScheme.PRIMARY + "filoghost");
-        if (helpCommand.hasPermission(sender)) {
-            sender.sendMessage(ColorScheme.PRIMARY_DARK + "Commands: " + ColorScheme.PRIMARY + helpCommand.getFullUsageText(context));
-        }
-    }
-
-    @Override
     protected void sendSubCommandDefaultPermissionMessage(SubCommandContext context) {
         context.getSender().sendMessage(ColorScheme.ERROR + "You don't have permission for this sub-command.");
     }
